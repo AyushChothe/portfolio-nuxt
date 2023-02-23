@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: Roboto, system-ui, sans-serif;
+  }
+  .card {
+    @apply border-2 rounded-md border-gray-400;
+  }
+  table {
+    @apply w-full border-2 rounded-xl border-gray-400 border-separate;
+  }
+  td:first-of-type {
+    @apply bg-gray-300 p-2 font-semibold;
+  }
+  td:last-of-type {
+    @apply bg-gray-200 p-2;
+  }
+  table > tr:first-of-type > td:first-of-type {
+    @apply rounded-tl-md;
+  }
+  table > tr:first-of-type > td:last-of-type {
+    @apply rounded-tr-md;
+  }
+  table > tr:last-of-type > td:first-of-type {
+    @apply rounded-bl-md;
+  }
+  table > tr:last-of-type > td:last-of-type {
+    @apply rounded-br-md;
+  }
+}

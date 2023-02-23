@@ -1,0 +1,7 @@
+<template>
+  <div class="container p-4 mx-auto">
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
+  </div>
+</template>
