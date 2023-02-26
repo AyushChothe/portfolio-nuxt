@@ -1,19 +1,20 @@
 <script setup>
+import { StarFilled } from '@ant-design/icons-vue';
 const { data, pending, error, refresh } = await useFetch("/api/get_langs")
-let langs = JSON.parse(data.value).data;
+let langs = JSON.parse(data.value).data.sort((a, b) => b.isFav - a.isFav);
 </script>
 
 <template>
-    <div class="flex flex-wrap justify-start">
-        <div v-for="lang in langs" class="p-2 mr-2 mb-2 rounded-md bg-gray-300 flex flex-col space-y-1">
-            <div class="flex items-center justify-center space-x-2">
-                <div class="bg-gray-200 w-5 h-5 rounded-full">
-                </div>
+    <a-card bordered hoverable title="Languages">
+        <a-card-grid :key="i" v-for="lang, i in langs">
+            <div class="flex items-center justify-start space-x-2">
+                <a-avatar></a-avatar>
                 <div>{{ lang.name }}</div>
+                <StarFilled v-if="lang.isFav" />
             </div>
-            <div class="bg-gray-200 w-full h-1">
-                <div class="bg-yellow-400 w-1/2 h-1 relative"></div>
+            <div class="bg-gray-200 w-full h-1 mt-2">
+                <div class="bg-yellow-400 h-1 relative" :class="`w-${lang.level}/5`"></div>
             </div>
-        </div>
-    </div>
+        </a-card-grid>
+    </a-card>
 </template>

@@ -1,6 +1,7 @@
 <template>
     <div>
         <Header />
-        <!-- <Languages /> -->
+        <br />
+        <Languages />
     </div>
 </template>
