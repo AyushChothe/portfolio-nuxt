@@ -4,7 +4,7 @@ interface Profile {
 }
 
 export default defineEventHandler((event) => {
-  event.res.end(
+  event.node.res.end(
     JSON.stringify({
       data: <Profile[]>[
         {

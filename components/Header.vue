@@ -1,8 +1,5 @@
 <script setup>
 import { GithubOutlined, GoogleOutlined, InstagramOutlined, LinkedinOutlined, TwitterOutlined } from '@ant-design/icons-vue';
-
-const { data } = await useFetch("/api/get_about_me")
-let aboutMe = JSON.parse(data.value).data;
 </script>
 
 <template>

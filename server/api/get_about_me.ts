@@ -1,11 +1,11 @@
-interface AboutMe {
-  name: String;
-  dob: String;
-  age: Number;
-  email: String;
-  location: String;
-  education: String[];
-  experience: String[];
+export interface AboutMe {
+  name: string;
+  dob: string;
+  age: number;
+  email: string;
+  location: string;
+  education: string[];
+  experience: string[];
 }
 
 let getAge = () => {
@@ -20,7 +20,7 @@ let getAge = () => {
 };
 
 export default defineEventHandler((event) => {
-  event.res.end(
+  event.node.res.end(
     JSON.stringify({
       data: <AboutMe>{
         name: "Ayush Chothe",

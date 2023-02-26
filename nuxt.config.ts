@@ -1,10 +1,9 @@
-import { defineNuxtConfig } from "nuxt/config";
-
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
   typescript: {
-    // strict: true,
+    strict: true,
   },
+  modules: ["@nuxtjs/tailwindcss"],
   plugins: ["@/plugins/antd"],
   postcss: {
     plugins: {
@@ -12,5 +11,4 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  css: ["@/assets/css/main.css"],
 });

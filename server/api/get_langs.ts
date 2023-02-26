@@ -1,29 +1,29 @@
 export interface Language {
-  name: String;
-  level: Number;
-  isFav: Boolean;
-  desc: String;
-  wiki: String;
+  name: string;
+  level: number;
+  isFav: boolean;
+  desc: string;
+  wiki: string;
 }
 
 export default defineEventHandler((event) => {
-  event.res.end(
+  event.node.res.end(
     JSON.stringify({
       data: <Language[]>[
-        { name: "Dart", level: 3, isFav: true, wiki: "", desc: "" },
+        { name: "Dart", level: 5, isFav: true, wiki: "", desc: "" },
+        { name: "Python 3", level: 5, isFav: true, wiki: "", desc: "" },
+        { name: "Rust", level: 3, isFav: true, wiki: "", desc: "" },
         { name: "GO", level: 2, isFav: false, wiki: "", desc: "" },
-        { name: "Python", level: 3, isFav: true, wiki: "", desc: "" },
         { name: "Julia", level: 2, isFav: true, wiki: "", desc: "" },
-        { name: "TypeScript", level: 2, isFav: true, wiki: "", desc: "" },
-        { name: "JavaScript", level: 2, isFav: false, wiki: "", desc: "" },
-        { name: "Ruby", level: 2, isFav: true, wiki: "", desc: "" },
-        { name: "CSharp", level: 2, isFav: false, wiki: "", desc: "" },
+        { name: "JavaScript", level: 4, isFav: false, wiki: "", desc: "" },
+        { name: "TypeScript", level: 3, isFav: true, wiki: "", desc: "" },
+        { name: "Ruby", level: 3, isFav: true, wiki: "", desc: "" },
+        { name: "Kotlin", level: 3, isFav: false, wiki: "", desc: "" },
+        { name: "CSharp", level: 3, isFav: false, wiki: "", desc: "" },
         { name: "VisualBasic", level: 2, isFav: false, wiki: "", desc: "" },
-        { name: "Kotlin", level: 2, isFav: false, wiki: "", desc: "" },
         { name: "Java", level: 2, isFav: false, wiki: "", desc: "" },
-        { name: "Rust", level: 3, isFav: false, wiki: "", desc: "" },
-        { name: "C", level: 2, isFav: false, wiki: "", desc: "" },
-        { name: "C++", level: 2, isFav: false, wiki: "", desc: "" },
+        { name: "C", level: 3, isFav: false, wiki: "", desc: "" },
+        { name: "C++", level: 3, isFav: false, wiki: "", desc: "" },
         { name: "Swift", level: 1, isFav: false, wiki: "", desc: "" },
         { name: "HTML", level: 3, isFav: false, wiki: "", desc: "" },
         { name: "CSS", level: 3, isFav: false, wiki: "", desc: "" },

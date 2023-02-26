@@ -1,5 +1,6 @@
 module.exports = {
   mode: "jit",
+  important: true,
   content: [
     "./components/**/*.{js,vue,ts}",
     "./layouts/**/*.vue",
@@ -8,9 +9,4 @@ module.exports = {
     "./nuxt.config.{js,ts}",
     "./app.vue",
   ],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-  variants: {},
 };

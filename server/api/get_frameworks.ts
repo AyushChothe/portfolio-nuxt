@@ -8,9 +8,9 @@ interface Framework {
 }
 
 export default defineEventHandler((event) => {
-  event.res.end(
+  event.node.res.end(
     JSON.stringify({
-        data: <Framework[]>[
+      data: <Framework[]>[
         {
           name: "Flutter",
           level: 3,
@@ -55,7 +55,7 @@ export default defineEventHandler((event) => {
           name: "VB.Net",
           level: 2,
           lang: "VisualBasic",
-          isFav: true,
+          isFav: false,
           wiki: "",
           desc: "",
         },
@@ -63,7 +63,7 @@ export default defineEventHandler((event) => {
           name: "CSharp.Net",
           level: 2,
           lang: "CSharp",
-          isFav: true,
+          isFav: false,
           wiki: "",
           desc: "",
         },
@@ -71,7 +71,7 @@ export default defineEventHandler((event) => {
           name: "ASP.Net",
           level: 2,
           lang: "CSharp",
-          isFav: true,
+          isFav: false,
           wiki: "",
           desc: "",
         },
